@@ -1,0 +1,14 @@
+def decripted(string,shift):
+    terang=''
+    for char in string:
+        if char=='':
+            terang=terang+char
+        elif char.isupper():
+            terang=terang+chr((ord(char)-shift-65)%26+65)
+        else:
+            terang=terang+chr((ord(char)-shift-97)%26+97)
+    return terang
+
+teks=input("Masukkan Text Sandi : ")
+geser=int(input("Key adalah : "))
+print("Teks Terang adalah : ", decripted(teks,geser))
