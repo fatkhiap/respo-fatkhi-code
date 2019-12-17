@@ -1,0 +1,16 @@
+def encripted(string,shift):
+    sandi=''
+    for char in string:
+        if char=='':
+            sandi=sandi+char
+        elif char.isupper():
+            sandi=sandi+chr((ord(char)+shift-65)%26+65)
+        else:
+            sandi=sandi+chr((ord(char)+shift-97)%26+97)
+    return sandi
+
+
+
+teks=input("Masukkan Text Terang : ")
+geser=int(input("Key adalah : "))
+print("Teks Sandi adalah : ", encripted(teks,geser))
