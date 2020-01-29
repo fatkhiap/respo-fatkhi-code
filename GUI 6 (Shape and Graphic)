@@ -1,0 +1,14 @@
+from tkinter import *
+
+root = Tk()
+
+canvas = Canvas(root, width= 400, height=200)
+canvas.pack()
+
+garisHitam = canvas.create_line(0,0,400,200)
+garisMerah = canvas.create_line(0,200,400,0,fill="red")
+kotakHijau = canvas.create_rectangle(100,40,300,160,fill="green")
+kotakKuning = canvas.create_rectangle(120,60,280,140,fill="yellow")
+text = canvas.create_text(150, 80, text="WOMBOL", anchor=W)
+
+root.mainloop()
