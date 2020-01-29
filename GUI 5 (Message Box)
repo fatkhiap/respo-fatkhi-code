@@ -1,0 +1,14 @@
+from tkinter import *
+import tkinter.messagebox
+
+root = Tk()
+
+tkinter.messagebox.showinfo("Hai","Anda memasuki dunia Digital W")
+
+jawab = tkinter.messagebox.askquestion("apakah anda masih menyukai W ?")
+
+if jawab == "yes":
+    print("WTLFAP")
+
+
+root.mainloop()
