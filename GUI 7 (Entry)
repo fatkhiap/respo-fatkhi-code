@@ -2,19 +2,18 @@ from tkinter import *
 
 root = Tk()
 
-label1 = Label(root,text="Masukkan Nama")
-label1.grid(row=0,column=0)
-
-e = Entry(root)
-e.grid(row=0,column=1)
+e = Entry(root, width=50)
+e.pack()
+e.insert(0,"Masukkan Namamu")
 
 
 def myClick():
-    myLabel = Label(root, text=e.get())
-    myLabel.grid()
+    hello = "Hello " + e.get()
+    myLabel = Label(root, text=hello)
+    myLabel.pack()
 
 myButton = Button(root, text="Print Namaku", command=myClick)
-myButton.grid(row=1)
+myButton.pack()
 
 
 root.mainloop()
